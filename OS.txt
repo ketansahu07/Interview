@@ -1,0 +1,73 @@
+1. Semaphore?
+
+-> A semaphore is an abstract data type used to control access to a common resource by multiple processes and avoid critical section problems in a multitasking operating system.
+------------------------------------------------------------------------------------------------------------------------
+2. Binary Semaphore?
+
+-> Semaphores which allow an arbitrary resource count are called counting semaphores, while semaphores which are restricted to the values 0 and 1 are called binary semaphores
+------------------------------------------------------------------------------------------------------------------------
+3. Mutex?
+
+-> A mutex is a locking mechanism used to synchronize access to a resource.
+------------------------------------------------------------------------------------------------------------------------
+4. Difference between mutex and binary semaphore?
+
+-> A mutex is a locking mechanism used to synchronize access to a resource. Only one task can acquire the mutex. It means there is ownership associated with a mutex, and only the owner can release the lock (mutex). 
+
+Semaphore is signaling mechanism (“I am done, you can carry on” kind of signal).
+------------------------------------------------------------------------------------------------------------------------
+5. Priority Inversion?
+
+-> Priority inversion is a bug that occurs when a high priority task is indirectly preempted by a low priority task. For example, the low priority task holds a mutex that the high priority task must wait for to continue executing.
+------------------------------------------------------------------------------------------------------------------------
+6. Deadlock and it's conditions?
+
+-> Deadlock is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process.
+
+Conditions:	
+a. Mutual Exclusion
+b. Hold and Wait
+c. No Preemption
+d. Circular wait
+------------------------------------------------------------------------------------------------------------------------
+7. Race Condition?
+
+-> A race condition occurs when two or more threads can access shared data and they try to change it at the same time. Because the thread scheduling algorithm can swap between threads at any time, you don't know the order in which the threads will attempt to access the shared data.
+
+Problems often occur when one thread does a "check-then-act" (e.g. "check" if the value is X, then "act" to do something that depends on the value being X) and another thread does something to the value in between the "check" and the "act".
+------------------------------------------------------------------------------------------------------------------------
+8. Fregmentation? Types of fregmentation?
+
+-> A problem in the operating system in which the processes are loaded and unloaded from memory, and free memory space is fragmented. Processes can't be assigned to memory blocks due to their small size, and the memory blocks stay unused.
+
+Two types of fregmentation:
+a. Internal fregmentation
+b. External fregmentation
+------------------------------------------------------------------------------------------------------------------------
+9. Paging? Why is paging needed?
+
+->  Paging is a storage mechanism used to retrieve processes from the secondary storage into the main memory in the form of pages. Pages are of fixed sizes.
+
+Paging is used for faster access to data. When a program needs a page, it is available in the main memory as the OS copies a certain number of pages from your storage device to main memory. Paging allows the physical address space of a process to be noncontiguous.
+------------------------------------------------------------------------------------------------------------------------
+10. Segmentation?
+
+-> Segmentation is a memory management technique in which the memory is divided into the variable size parts.
+
+Each segment contains the same type of functions such as the main function can be included in one segment and the library functions can be included in the other segment
+------------------------------------------------------------------------------------------------------------------------
+11. Producer Consumer Problem?
+
+-> We have a buffer of fixed size. A producer can produce an item and can place in the buffer. A consumer can pick items and can consume them. We need to ensure that when a producer is placing an item in the buffer, then at the same time consumer should not consume any item. In this problem, buffer is the critical section.
+------------------------------------------------------------------------------------------------------------------------
+12. Process scheduling algorithms.
+
+-> 6 algorithms:
+
+a. First-Come, First-Served (FCFS) Scheduling
+b. Shortest-Job-Next (SJN) Scheduling
+c. Priority Scheduling
+d. Shortest Remaining Time
+e. Round Robin(RR) Scheduling
+f. Multiple-Level Queues Scheduling
+------------------------------------------------------------------------------------------------------------------------
